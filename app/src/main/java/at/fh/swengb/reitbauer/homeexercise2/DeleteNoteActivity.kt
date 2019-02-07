@@ -8,6 +8,17 @@ import kotlinx.android.synthetic.main.activity_delete_note.*
 
 class DeleteNoteActivity : AppCompatActivity() {
 
+
+
+
+    /* Ich kann diese Klasse nicht löschen weil sonst die Activity AddNote nicht funktioniert, weiß aber nicht
+        warum das so ist.
+       Bitte diese Klasse und Aktivity einfach ignorieren. Der User kann sie auch nicht aufrufen.
+    */
+
+
+
+
     lateinit var db: NotesRoomDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +31,7 @@ class DeleteNoteActivity : AppCompatActivity() {
 
     fun deletenote (v:View){
 
-        db.noteDao.delete(txt_deletenote_title.text.toString())
+        db.NoteDao.delete(txt_deletenote_title.text.toString())
         finish()
 
 

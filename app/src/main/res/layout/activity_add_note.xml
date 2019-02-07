@@ -9,30 +9,40 @@
 
     <EditText
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="61dp"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/addnote_title" android:layout_marginTop="32dp"
+            android:id="@+id/addnote_title" android:layout_marginTop="24dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:hint="Title"/>
+            app:layout_constraintEnd_toEndOf="parent" android:hint="Title"
+            app:layout_constraintHorizontal_bias="0.117"/>
     <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="351dp"
+            android:layout_height="68dp"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/addnote_content"
             android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:hint="Content"
-            app:layout_constraintHorizontal_bias="0.503" android:layout_marginTop="32dp"
+            app:layout_constraintHorizontal_bias="0.47" android:layout_marginTop="40dp"
             app:layout_constraintTop_toBottomOf="@+id/addnote_title"/>
     <Button
             android:text="Save note"
             android:layout_width="148dp"
+            android:layout_height="45dp"
+            android:id="@+id/addnote_savenote" android:layout_marginTop="200dp"
+            app:layout_constraintTop_toBottomOf="@+id/addnote_content"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp" android:onClick="save_note"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toStartOf="@+id/button"/>
+    <Button
+            android:text="share"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/addnote_savenote" android:layout_marginTop="29dp"
-            app:layout_constraintTop_toBottomOf="@+id/addnote_content" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="4dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp" android:onClick="save_note"/>
+            android:id="@+id/button" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="64dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/addnote_content"
+            app:layout_constraintVertical_bias="0.874" android:onClick="share"/>
 </android.support.constraint.ConstraintLayout>
